@@ -15,7 +15,7 @@ export default class App extends React.Component{
 
     this.state.status == 'off' ? 
       this.setState({status: 'on'}) : 
-        this.setState({  status: 'off' });
+        this.setState({  status: 'off' })
   }
 
   lampada(){
