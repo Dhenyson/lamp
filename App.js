@@ -1,6 +1,8 @@
 import React from "react"
 import {View, StyleSheet, Image, Vibration, TouchableHighlight} from 'react-native'
 
+
+
 export default class App extends React.Component{
   constructor(props){
     super(props);
@@ -10,12 +12,15 @@ export default class App extends React.Component{
     }
   }
 
+
   interruptor(){
     Vibration.vibrate(100)
 
     this.state.status == 'off' ? 
       this.setState({status: 'on'}) : 
         this.setState({  status: 'off' })
+
+    
   }
 
   lampada(){
@@ -35,6 +40,7 @@ export default class App extends React.Component{
   }
 
   render(){
+    
     return(
       <View style={ this.state.status == 'off' ? styles.container : [styles.container, {backgroundColor: '#fbfbd9'}]}>
         
